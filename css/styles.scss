@@ -9,8 +9,7 @@
 body {
     font-family: 'Spartan', sans-serif;
     width: 100vw;
-   overflow-x: hidden;
-
+    overflow-x: hidden;
 }
 
 .container {
@@ -24,7 +23,6 @@ body {
 .container-items-top {
     display: flex;
     justify-content: center;
-
 }
 
 .header {
@@ -36,7 +34,8 @@ body {
 }
 
 .navbar {
-    width: 50%;
+    // background-color: red;
+    width: 40%;
     display: flex;
     margin-top: 64px;
     margin-left: 64px;
@@ -44,37 +43,89 @@ body {
     justify-content: space-between;
     // background-color: blueviolet;
 
-
     .brand-title {
         padding-right: 30px;
         padding-top: 5px;
         align-self: center;
+        order: 1;
+
+        &:hover {
+            cursor: pointer;
+        }
     }
 
-    ul {
-        display: flex;
-        align-content: center;
+    .nav-links {
+        order: 2;
+        ul {
+            display: flex;
+            align-content: center;
+        }
+    
+        li {
+            list-style: none;
+            padding-right: 32px;
+            // outline: 1px solid white;
+        }
+    
+        a {
+            text-decoration: none;
+            color: #fff;
+            line-height: 13px;
+            letter-spacing: 0.5px;
+            text-transform: lowercase;
+            font-size: 12px;
+            position: relative;
+            ;
+        }
     }
+   
 
-    li {
-        list-style: none;
-        padding-right: 32px;
-        // outline: 1px solid white;
-    }
-
-    a {
-        text-decoration: none;
-        color: #fff;
-        line-height: 13px;
-        letter-spacing: 0.5px;
-        text-transform: lowercase;
-        font-size: 12px;
-    }
-
-    // .burger {
-    //     display: none;
-    // }
 }
+
+.link::after {
+    content: '';
+    position: absolute;
+    display: block;
+    margin-top: 5px;
+    width: 0;
+    height: 3px;
+    background: #fff;
+    transition: width .3s;
+    -webkit-transition: width .3s;
+    -moz-transition: width .3s;
+    -ms-transition: width .3s;
+    -o-transition: width .3s;
+}
+
+.link:hover::after {
+    width: 100%;
+    transition: width .3s;
+    -webkit-transition: width .3s;
+    -moz-transition: width .3s;
+    -ms-transition: width .3s;
+    -o-transition: width .3s;
+}
+
+.burger {
+    display: none;
+    // order: 3;
+}
+
+// .burger {
+//     display: block;
+//            &:hover {
+//         cursor: pointer;
+//     }
+// }
+
+// .burger div {
+//     align-content: center;
+//     width: 30px;
+//     height: 5px;
+//     background-color: rgb(109, 46, 46);
+//     margin: 5px;
+// }
+
 
 .hero-image {
     width: 840px;
@@ -135,13 +186,13 @@ body {
 
         &:hover {
             cursor: pointer;
-            color:rgb(218, 218, 218);
+            color: rgb(218, 218, 218);
             transition: .3s ease;
             -webkit-transition: .3s ease;
             -moz-transition: .3s ease;
             -ms-transition: .3s ease;
             -o-transition: .3s ease;
-}
+        }
     }
 
     .text {
@@ -182,7 +233,7 @@ body {
                 -moz-transition: .2s ease;
                 -ms-transition: .2s ease;
                 -o-transition: .2s ease;
-}
+            }
         }
 
         .fa-chevron-left,
@@ -190,7 +241,6 @@ body {
             text-align: center;
             padding: 25px 25px;
         }
-
     }
 }
 
@@ -253,7 +303,6 @@ body {
     background-image: url('/images/image-about-light.jpg');
 }
 
-
 //----------MEDIA QUERY FOR MOBILE------------------
 
 @media screen and (min-width: 300px) and (max-width: 767px) {
@@ -271,16 +320,64 @@ body {
     }
 
     .navbar {
+        margin-top: 45px;
         width: 100%;
     }
 
     .nav-links {
-        display: none;
+        //margin-top: 54px;
+        position: absolute;
+        background-color: rgba(255, 255, 255, 0.98);
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 120px;
+        transform: translateX(100%);
+        -webkit-transform: translateX(100%);
+        -moz-transform: translateX(100%);
+        -ms-transform: translateX(100%);
+        -o-transform: translateX(100%);
+        transition: 0.5s ease-in;
+        -webkit-transition: 0.5s ease-in;
+        -moz-transition: 0.5s ease-in;
+        -ms-transition: 0.5s ease-in;
+        -o-transition: 0.5s ease-in;
     }
 
+    .nav-links ul {
+        margin-top: 54px;
+        margin-left: 64px;
+
+        li {
+            a {
+                color: black;
+            }
+
+            .link::after {
+                background: rgb(0, 0, 0);
+            }
+        }
+
+    }
+
+    .nav-active {
+        transform: translateX(0%);
+        -webkit-transform: translateX(0%);
+        -moz-transform: translateX(0%);
+        -ms-transform: translateX(0%);
+        -o-transform: translateX(0%);
+    }
+
+   
+
     .hero-title {
+
         width: 100vw;
         height: 80vh;
+
+        .main-text {
+            margin-top: -30px;
+        }
 
         .main-text,
         .body-text {
@@ -296,7 +393,7 @@ body {
 
         &:hover {
             cursor: pointer;
-            color:grey;
+            color: grey;
         }
     }
 
@@ -305,21 +402,21 @@ body {
         right: 0;
     }
 
-    .burger {
-        display: block;
+    // .burger {
+    //     display: block;
 
-        &:hover {
-            cursor: pointer;
-        }
-    }
+    //     &:hover {
+    //         cursor: pointer;
+    //     }
+    // }
 
-    .burger div {
-        align-content: center;
-        width: 30px;
-        height: 5px;
-        background-color: rgb(109, 46, 46);
-        margin: 5px;
-    }
+    // .burger div {
+    //     align-content: center;
+    //     width: 30px;
+    //     height: 5px;
+    //     background-color: rgb(109, 46, 46);
+    //     margin: 5px;
+    // }
 
     // --------------------------------------------
 
@@ -348,10 +445,12 @@ body {
 
     .about-us-container {
         width: 100vw;
+
         // background-color: aquamarine;
         .about-us-container-texts {
             // background-color: pink;
             width: 85vw;
+
             p {
                 text-align: left;
                 font-size: 12px;
@@ -368,34 +467,131 @@ body {
 }
 
 @media screen and (min-width: 540px) and (max-width: 767px) {
+
     .header {
         height: 520px;
     }
-}
 
-@media screen and (min-width: 1280px) {
-    .header {
-        height: 520px;
-        height: 73vh;
+    .hero-title {
+
+        .main-text {
+            margin-top: -30px;
+            width: 75%;
+        }
+
+        .body-text {
+            width: 75%;
+        }
     }
 
-    .cta {
-        margin-left: 13.5vh;
+    .text {
+        margin-left: 5.5%;
+    }
 
-        &:hover {
-            color:rgb(218, 218, 218);
+    .sample-img-1 {
+        img {
+            margin-top: 40px;
+            width: 100vw;
+        }
+
+    }
+
+    .sample-img-2 {
+        img {
+
+            width: 100vw;
         }
     }
 }
 
+
+@media screen and (min-width: 768) {
+    .hero-title {
+        background-color: red;
+    }
+
+}
+
+@media screen and (min-width: 1280px) and (max-width: 1439px) {
+
+    body {
+        overflow-y: hidden;
+        width: 100vw;
+    }
+
+    .hero-title {
+        // background-color: rgb(16, 42, 49);
+    }
+
+    .header {
+        width: 62vw;
+        height: 70vh;
+    }
+
+    .hero-title {
+        width: 38vw;
+        height: 70vh;
+    }
+
+    .text {
+        margin-left: 7.5%;
+    }
+
+    .cta {
+        margin-left: 7.5%;
+
+        &:hover {
+            color: rgb(203, 224, 14);
+        }
+    }
+
+    .about-us-container {
+        height: 30vh;
+
+        .about-us-container-texts {
+            width: 80%;
+        }
+
+        .about-us-title {
+            padding-top: 10px;
+        }
+
+        .about-us-body {
+            font-size: 12px;
+            // color: rgb(51, 255, 0);
+            line-height: 22px;
+        }
+    }
+
+    .sample-img-1 {
+        img {
+            height: 30vh;
+            width: 30vw;
+            // width: 30vw;
+        }
+    }
+
+    .sample-img-2 {
+        img {
+            height: 30vh;
+            width: 38vw;
+        }
+    }
+}
+
+
 @media screen and (min-width: 1440px) {
+
+    body {
+        overflow-y: hidden;
+    }
 
     .header {
         height: 520px;
         height: 73vh;
     }
 
-    .text {        
+    .text {
         // background-color: cornflowerblue;
         margin-left: 7.5%;
         text-align: left;

@@ -36,7 +36,7 @@ body {
 }
 
 .navbar {
-  width: 50%;
+  width: 40%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -56,9 +56,22 @@ body {
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
 }
 
-.navbar ul {
+.navbar .brand-title:hover {
+  cursor: pointer;
+}
+
+.navbar .nav-links {
+  -webkit-box-ordinal-group: 3;
+      -ms-flex-order: 2;
+          order: 2;
+}
+
+.navbar .nav-links ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -66,18 +79,47 @@ body {
       align-content: center;
 }
 
-.navbar li {
+.navbar .nav-links li {
   list-style: none;
   padding-right: 32px;
 }
 
-.navbar a {
+.navbar .nav-links a {
   text-decoration: none;
   color: #fff;
   line-height: 13px;
   letter-spacing: 0.5px;
   text-transform: lowercase;
   font-size: 12px;
+  position: relative;
+}
+
+.link::after {
+  content: '';
+  position: absolute;
+  display: block;
+  margin-top: 5px;
+  width: 0;
+  height: 3px;
+  background: #fff;
+  transition: width .3s;
+  -webkit-transition: width .3s;
+  -moz-transition: width .3s;
+  -ms-transition: width .3s;
+  -o-transition: width .3s;
+}
+
+.link:hover::after {
+  width: 100%;
+  transition: width .3s;
+  -webkit-transition: width .3s;
+  -moz-transition: width .3s;
+  -ms-transition: width .3s;
+  -o-transition: width .3s;
+}
+
+.burger {
+  display: none;
 }
 
 .hero-image {
@@ -282,14 +324,50 @@ body {
     height: 360px;
   }
   .navbar {
+    margin-top: 45px;
     width: 100%;
   }
   .nav-links {
-    display: none;
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.98);
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 120px;
+    transform: translateX(100%);
+    -webkit-transform: translateX(100%);
+    -moz-transform: translateX(100%);
+    -ms-transform: translateX(100%);
+    -o-transform: translateX(100%);
+    transition: 0.5s ease-in;
+    -webkit-transition: 0.5s ease-in;
+    -moz-transition: 0.5s ease-in;
+    -ms-transition: 0.5s ease-in;
+    -o-transition: 0.5s ease-in;
+  }
+  .nav-links ul {
+    margin-top: 54px;
+    margin-left: 64px;
+  }
+  .nav-links ul li a {
+    color: black;
+  }
+  .nav-links ul li .link::after {
+    background: black;
+  }
+  .nav-active {
+    transform: translateX(0%);
+    -webkit-transform: translateX(0%);
+    -moz-transform: translateX(0%);
+    -ms-transform: translateX(0%);
+    -o-transform: translateX(0%);
   }
   .hero-title {
     width: 100vw;
     height: 80vh;
+  }
+  .hero-title .main-text {
+    margin-top: -30px;
   }
   .hero-title .main-text,
   .hero-title .body-text {
@@ -305,20 +383,6 @@ body {
   .arrow-icons {
     top: -80px;
     right: 0;
-  }
-  .burger {
-    display: block;
-  }
-  .burger:hover {
-    cursor: pointer;
-  }
-  .burger div {
-    -ms-flex-line-pack: center;
-        align-content: center;
-    width: 30px;
-    height: 5px;
-    background-color: #6d2e2e;
-    margin: 5px;
   }
   .container-items-bottom {
     display: -webkit-box;
@@ -371,22 +435,80 @@ body {
   .header {
     height: 520px;
   }
+  .hero-title .main-text {
+    margin-top: -30px;
+    width: 75%;
+  }
+  .hero-title .body-text {
+    width: 75%;
+  }
+  .text {
+    margin-left: 5.5%;
+  }
+  .sample-img-1 img {
+    margin-top: 40px;
+    width: 100vw;
+  }
+  .sample-img-2 img {
+    width: 100vw;
+  }
 }
 
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 768) {
+  .hero-title {
+    background-color: red;
+  }
+}
+
+@media screen and (min-width: 1280px) and (max-width: 1439px) {
+  body {
+    overflow-y: hidden;
+    width: 100vw;
+  }
   .header {
-    height: 520px;
-    height: 73vh;
+    width: 62vw;
+    height: 70vh;
+  }
+  .hero-title {
+    width: 38vw;
+    height: 70vh;
+  }
+  .text {
+    margin-left: 7.5%;
   }
   .cta {
-    margin-left: 13.5vh;
+    margin-left: 7.5%;
   }
   .cta:hover {
-    color: #dadada;
+    color: #cbe00e;
+  }
+  .about-us-container {
+    height: 30vh;
+  }
+  .about-us-container .about-us-container-texts {
+    width: 80%;
+  }
+  .about-us-container .about-us-title {
+    padding-top: 10px;
+  }
+  .about-us-container .about-us-body {
+    font-size: 12px;
+    line-height: 22px;
+  }
+  .sample-img-1 img {
+    height: 30vh;
+    width: 30vw;
+  }
+  .sample-img-2 img {
+    height: 30vh;
+    width: 38vw;
   }
 }
 
 @media screen and (min-width: 1440px) {
+  body {
+    overflow-y: hidden;
+  }
   .header {
     height: 520px;
     height: 73vh;
