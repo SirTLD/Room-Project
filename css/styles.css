@@ -534,9 +534,50 @@ body {
   }
 }
 
-@media screen and (min-width: 768) {
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  .container-items-top {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .header {
+    width: 100vw;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 50vh;
+  }
   .hero-title {
-    background-color: red;
+    background-color: #5a5959;
+    width: 100vw;
+    height: 60vh;
+  }
+  .hero-title .main-text {
+    margin-top: -60px;
+  }
+  .hero-title .text {
+    margin-left: 7.5%;
+  }
+  .container-items-bottom {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .sample-img-1 {
+    margin-top: 940px;
+  }
+  .sample-img-1 img {
+    width: 100vw;
+  }
+  .about-us-container {
+    padding: 60px 0;
+  }
+  .sample-img-2 img {
+    width: 100vw;
   }
 }
 
