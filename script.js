@@ -11,7 +11,7 @@ burgerIcon.addEventListener('click', () => {
     if (link.style.animation) {
       link.style.animation = '';
     } else {
-      link.style.animation = `menuSlide 0.5s ease forwards ${index / 5 + 0.4}s`;
+      link.style.animation = `menuSlide 1s ease forwards ${index / 5 + 0.4}s`;
     }
   });
 

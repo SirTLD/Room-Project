@@ -326,9 +326,10 @@ body {
     }
 
     .navbar {
-        margin-left: 8%;
+        margin-left: 6%;
         margin-top: 45px;
-        width: 50%;
+        width: 55%;
+        // background-color:rgb(203, 224, 14);
     }
 
     .nav-links {
@@ -353,7 +354,7 @@ body {
     }
 
     .nav-links ul {
-        margin-left: 25%;
+        margin-left: 23%;
         position: relative;
         margin-top: 54px;
 
@@ -525,6 +526,10 @@ body {
     .about-us-container {
         width: 100vw;
 
+        .about-us-body {
+            line-height: 18px;
+        }
+
         // background-color: aquamarine;
         .about-us-container-texts {
             // background-color: pink;
@@ -600,7 +605,7 @@ body {
     .hero-title {
         background-color:rgb(90, 89, 89);
         width: 100vw;
-        height: 60vh;
+        height: 50vh;
         .main-text {
             margin-top: -60px;
         }
@@ -609,13 +614,13 @@ body {
             margin-left: 7.5%;
         }        
     }
-
+.arrow-icons {
+    top: 0;
+    right: 0;
+}
     .container-items-bottom {
         flex-direction: column;
-    }
-
-
-    
+    }    
     .sample-img-1 {
         margin-top: 940px;
         // order: 1;

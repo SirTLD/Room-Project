@@ -329,9 +329,9 @@ body {
             order: 2;
   }
   .navbar {
-    margin-left: 8%;
+    margin-left: 6%;
     margin-top: 45px;
-    width: 50%;
+    width: 55%;
   }
   .nav-links {
     position: absolute;
@@ -352,7 +352,7 @@ body {
     -o-transition: 0.5s ease-in;
   }
   .nav-links ul {
-    margin-left: 25%;
+    margin-left: 23%;
     position: relative;
     margin-top: 54px;
   }
@@ -495,6 +495,9 @@ body {
   .about-us-container {
     width: 100vw;
   }
+  .about-us-container .about-us-body {
+    line-height: 18px;
+  }
   .about-us-container .about-us-container-texts {
     width: 85vw;
   }
@@ -553,13 +556,17 @@ body {
   .hero-title {
     background-color: #5a5959;
     width: 100vw;
-    height: 60vh;
+    height: 50vh;
   }
   .hero-title .main-text {
     margin-top: -60px;
   }
   .hero-title .text {
     margin-left: 7.5%;
+  }
+  .arrow-icons {
+    top: 0;
+    right: 0;
   }
   .container-items-bottom {
     -webkit-box-orient: vertical;
