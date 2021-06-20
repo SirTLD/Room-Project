@@ -28,9 +28,33 @@ body {
 }
 
 .header {
-  width: 60vw;
+  width: 60%;
   background-color: aquamarine;
   background-image: url("/images/desktop-image-hero-1.jpg");
+  background-size: cover;
+  height: 70%;
+}
+
+.header-1 {
+  width: 60%;
+  background-color: aquamarine;
+  background-image: url("/images/desktop-image-hero-2.jpg");
+  background-size: cover;
+  height: 70%;
+}
+
+.header-2 {
+  width: 60vw;
+  background-color: aquamarine;
+  background-image: url("/images/desktop-image-hero-3.jpg");
+  background-size: cover;
+  height: 73vh;
+}
+
+.header-3 {
+  width: 60vw;
+  background-color: aquamarine;
+  background-image: url("/images/desktop-image-hero-3.jpg");
   background-size: cover;
   height: 73vh;
 }
@@ -177,13 +201,13 @@ body {
   margin-left: 7.5%;
 }
 
-.hero-title .fa-arrow-circle-right {
-  padding-left: 10%;
+.hero-title .fa-long-arrow-right {
+  padding-left: 1%;
   color: #fff;
   font-size: 40px;
 }
 
-.hero-title .fa-arrow-circle-right:hover {
+.hero-title .fa-long-arrow-right:hover {
   cursor: pointer;
   color: #dadada;
   transition: .3s ease;
@@ -217,7 +241,7 @@ body {
   bottom: 0;
 }
 
-.hero-title .arrow-icons .fas {
+.hero-title .arrow-icons .fal {
   color: #fff;
   font-size: 30px;
   background-color: black;
@@ -225,7 +249,7 @@ body {
   height: 80px;
 }
 
-.hero-title .arrow-icons .fas:hover {
+.hero-title .arrow-icons .fal:hover {
   background-color: grey;
   cursor: pointer;
   transition: .2s ease;
@@ -292,6 +316,7 @@ body {
   font-size: 12px;
   line-height: 26px;
   letter-spacing: -0.25px;
+  font-size: 14px;
 }
 
 .sample-img-1,
@@ -403,20 +428,17 @@ body {
   .burger div {
     -ms-flex-line-pack: center;
         align-content: center;
-    width: 30px;
+    width: 35px;
     height: 5px;
     background-color: white;
-    margin: 5px;
+    margin: 6px 0;
   }
   .toggle-close .line1 {
     transition: .5s ease;
     position: relative;
     background-color: black;
-    transform: rotate(-45deg) translate(-5px, 11px);
-    -webkit-transform: rotate(-45deg) translate(-5px, 11px);
-    -moz-transform: rotate(-45deg) translate(-5px, 11px);
-    -ms-transform: rotate(-45deg) translate(-5px, 11px);
-    -o-transform: rotate(-45deg) translate(-5px, 11px);
+    -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+            transform: rotate(-45deg) translate(-9px, 6px);
     -webkit-transition: .5s ease;
     -moz-transition: .5s ease;
     -ms-transition: .5s ease;
@@ -431,11 +453,8 @@ body {
     transition: .5s ease;
     background-color: black;
     position: relative;
-    transform: rotate(45deg) translate(-5px, -12px);
-    -webkit-transform: rotate(45deg) translate(-5px, -12px);
-    -moz-transform: rotate(45deg) translate(-5px, -12px);
-    -ms-transform: rotate(45deg) translate(-5px, -12px);
-    -o-transform: rotate(45deg) translate(-5px, -12px);
+    -webkit-transform: rotate(45deg) translate(-8px, -8px);
+            transform: rotate(45deg) translate(-8px, -8px);
   }
   @-webkit-keyframes menuSlide {
     from {
@@ -612,6 +631,9 @@ body {
   }
   .cta:hover {
     color: #cbe00e;
+  }
+  .fa-long-arrow-right {
+    color: #fff;
   }
   .about-us-container {
     height: 30vh;
