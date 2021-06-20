@@ -29,7 +29,6 @@ body {
 
 .header {
   width: 60%;
-  background-color: aquamarine;
   background-image: url("/images/desktop-image-hero-1.jpg");
   background-size: cover;
   height: 70%;
@@ -37,7 +36,6 @@ body {
 
 .header-1 {
   width: 60%;
-  background-color: aquamarine;
   background-image: url("/images/desktop-image-hero-2.jpg");
   background-size: cover;
   height: 70%;
@@ -45,7 +43,6 @@ body {
 
 .header-2 {
   width: 60vw;
-  background-color: aquamarine;
   background-image: url("/images/desktop-image-hero-3.jpg");
   background-size: cover;
   height: 73vh;
@@ -53,7 +50,6 @@ body {
 
 .header-3 {
   width: 60vw;
-  background-color: aquamarine;
   background-image: url("/images/desktop-image-hero-3.jpg");
   background-size: cover;
   height: 73vh;

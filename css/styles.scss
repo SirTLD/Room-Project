@@ -30,7 +30,7 @@ body {
 
 .header {
     width: 60%;
-    background-color: aquamarine;
+    
     background-image: url('/images/desktop-image-hero-1.jpg');
     background-size: cover;
     height:70%;
@@ -38,7 +38,7 @@ body {
 
 .header-1 {
     width: 60%;
-    background-color: aquamarine;
+   
     background-image: url('/images/desktop-image-hero-2.jpg');
     background-size: cover;
     height: 70%;
@@ -47,7 +47,7 @@ body {
 
 .header-2 {
     width: 60vw;
-    background-color: aquamarine;
+    
     background-image: url('/images/desktop-image-hero-3.jpg');
     background-size: cover;
     height: 73vh;
@@ -55,7 +55,7 @@ body {
 
 .header-3 {
     width: 60vw;
-    background-color: aquamarine;
+   
     background-image: url('/images/desktop-image-hero-3.jpg');
     background-size: cover;
     height: 73vh;
@@ -153,6 +153,8 @@ body {
     display: none;
 }
 
+
+
 .hero-title {
     position: relative;
     width: 40vw;
@@ -205,22 +207,7 @@ body {
                         -o-transition: .3s ease;
                     }
     }
-    // .fa-arrow-circle-right {
-    //     padding-left: 10%;
-    //     color: #fff;
-    //     font-size: 40px;
-
-    //     &:hover {
-    //         cursor: pointer;
-    //         color: rgb(218, 218, 218);
-    //         transition: .3s ease;
-    //         -webkit-transition: .3s ease;
-    //         -moz-transition: .3s ease;
-    //         -ms-transition: .3s ease;
-    //         -o-transition: .3s ease;
-    //     }
-    // }
-
+    
     .text {
 
         p {
@@ -345,8 +332,7 @@ body {
         height: 360px;
     }
 
-
-    .brand-title {
+   .brand-title {
         order: 2;
     }
 
@@ -354,7 +340,7 @@ body {
         margin-left: 6%;
         margin-top: 45px;
         width: 55%;
-        // background-color:rgb(203, 224, 14);
+      
     }
 
     .nav-links {

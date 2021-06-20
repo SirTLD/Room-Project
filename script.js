@@ -12,7 +12,9 @@ burgerIcon.addEventListener('click', () => {
 const arrowLeft = document.querySelector('.fa-chevron-left');
 const arrowRight = document.querySelector('.fa-chevron-right');
 
-const divContainer = document.querySelector('.hero-title');
+// const divContainer = document.querySelector('.hero-title');
+
+const divContainer = document.querySelectorAll('.hero-title');
 
 const headerImage = document.querySelector('.header');
 
