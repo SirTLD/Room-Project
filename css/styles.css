@@ -9,7 +9,12 @@
 body {
   font-family: 'Spartan', sans-serif;
   width: 100vw;
-  overflow-x: hidden;
+  position: relative;
+}
+
+html,
+body {
+  overflow-x: hidden !important;
 }
 
 .container {
