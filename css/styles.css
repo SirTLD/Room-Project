@@ -215,7 +215,7 @@ nav {
   display: flex;
   position: absolute;
   top: -128px;
-  right: -30px;
+  right: -31px;
 }
 
 .arrow-icons .arrow-right,
@@ -260,7 +260,7 @@ nav {
 .sample-img-1 {
   background-image: url("/images/image-about-dark.jpg");
   height: 238px;
-  width: 100%;
+  width: 100vw;
 }
 
 .about-us-container {
@@ -294,7 +294,7 @@ nav {
 .sample-img-2 {
   background-image: url("/images/image-about-light.jpg");
   height: 238px;
-  width: 100%;
+  width: 100vw;
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
