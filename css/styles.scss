@@ -194,6 +194,10 @@ nav {
     }
 }
 
+.arrow-icons-desktop {
+    display: none;
+}
+
 .long-arrow {
     cursor: pointer;
     background-image: url('/images/icon-arrow.svg');
@@ -206,7 +210,7 @@ nav {
     display: flex;
     position: absolute;
     top: -128px;
-    right: -28px;
+    right: -30px;
 
     .arrow-right,
     .arrow-left {
@@ -290,29 +294,60 @@ nav {
 
 @media screen and (min-width: 1280px) {
 
-    .container {
+    .container {      
         width: 100vw;
         height: 100vh;
-
+       display: grid;
+    //    grid-template-columns: 58.33vw 41.66vw;
+    // grid-template-columns: 58.33vw auto;
+    //    grid-template-rows: 66.75vh 33.25vh;  
+    grid-template-columns: repeat(2, auto);
+       grid-template-rows: auto;
     }
 
     .container-items-top {
+     
+        width: 100vw;
+        grid-row: 1/2;
+        flex-direction: row;
+        height: 100%;
+        // border: 1px solid blue;
+    }
+
+    .container-items-bottom {
+        grid-row: 2/3;
         flex-direction: row;
         width: 100vw;
-        height: 66.75vh;
-        border: 1px solid blue;
+        height: 100%;
+        // border: 2px solid green;
     }
 
 
     .header {
-        height: 100%;
-        width: 58.33vw;
+        grid-column: 1/2;
+        grid-row: 1/2;
+        width:140%;
+        height: 100%;       
         background-image: url('/images/desktop-image-hero-1.jpg');
         background-size: cover;
         background-repeat: no-repeat;
-        border: 1px solid red;
+        // border: 1px solid red;
         background-position: center;
     }
+
+     
+    /* IMAGES */
+
+  
+    .header2 {
+        background-image: url('/images/desktop-image-hero-2.jpg');
+    }
+
+    .header3 {
+        background-image: url('/images/desktop-image-hero-3.jpg');
+    }
+
+    // ------------------------------------------------------
 
     .brand-title {
         order: 1;
@@ -341,13 +376,16 @@ nav {
     }
 
     .hero-title {
-        width: calc(1440px - 840px);
+        grid-column: 2/3;
+        grid-row: 1/2;
         height: 100%;
         padding-top: 120px;
         padding-bottom: 153px;
         padding-left: 100px;
         padding-right: 100px;
+        // width:10%;
         // border : 1px solid black;
+        position: relative;
     }
 
     .main-text {
@@ -356,44 +394,70 @@ nav {
         letter-spacing: -1.67px;
     }
 
-.arrow-icons {
-    top: 53.8vh;
-   left: 0;
+    .arrow-icons {
+        display: none;
+    }    
 
-   .arrow-right,
-   .arrow-left {
-       width: 80px;
-       height: 80px;
- 
-}
+    .arrow-icons-desktop {
+        display: flex;
+        position: absolute;
+        bottom:35px;
+        left: 0;
 
-}
+        .arrow-right-desk,
+        .arrow-left-desk {
+            width: 80px;
+            height: 80px;
+            background-color: black;
+        }
 
-.arrow-right,
-.arrow-left {
-    width: 12px;
-    height: 24px;
-  
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    .container-items-bottom {
-        flex-direction: row;
-        height: 33.25vh;
+        &:hover {
+            background-color: #444444;
+            cursor: pointer;
+        }
     }
+
+    .arrow-right-desk,
+    .arrow-left-desk {
+        width: 12px;
+        height: 24px;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    .arrow-right-desk {
+        background-image: url('/images/icon-angle-right.svg');
+    }
+    
+    .arrow-left-desk {
+        background-image: url('/images/icon-angle-left.svg');
+    }
+
+
+    .sample-img-1, .sample-img-2 {
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    .about-us-container {
+        align-self: center;
+        justify-self: center;
+    }
+
+
+   
+    
+
+    
+
+
+
+
+
+
+    
 }
 
 
@@ -1225,6 +1289,9 @@ nav {
 //         // background-color: cornflowerblue;
 //         margin-left: 7.5%;
 //         text-align: left;
+//     }
+
+// }       text-align: left;
 //     }
 
 // }

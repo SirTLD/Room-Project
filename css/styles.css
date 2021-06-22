@@ -197,6 +197,10 @@ nav {
   cursor: pointer;
 }
 
+.arrow-icons-desktop {
+  display: none;
+}
+
 .long-arrow {
   cursor: pointer;
   background-image: url("/images/icon-arrow.svg");
@@ -211,7 +215,7 @@ nav {
   display: flex;
   position: absolute;
   top: -128px;
-  right: -28px;
+  right: -30px;
 }
 
 .arrow-icons .arrow-right,
@@ -303,24 +307,55 @@ nav {
   .container {
     width: 100vw;
     height: 100vh;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (auto)[2];
+        grid-template-columns: repeat(2, auto);
+    -ms-grid-rows: auto;
+        grid-template-rows: auto;
   }
   .container-items-top {
+    width: 100vw;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
+    grid-row: 1/2;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    height: 100%;
+  }
+  .container-items-bottom {
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 1;
+    grid-row: 2/3;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
     width: 100vw;
-    height: 66.75vh;
-    border: 1px solid blue;
+    height: 100%;
   }
   .header {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-column: 1/2;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
+    grid-row: 1/2;
+    width: 140%;
     height: 100%;
-    width: 58.33vw;
     background-image: url("/images/desktop-image-hero-1.jpg");
     background-size: cover;
     background-repeat: no-repeat;
-    border: 1px solid red;
     background-position: center;
+  }
+  /* IMAGES */
+  .header2 {
+    background-image: url("/images/desktop-image-hero-2.jpg");
+  }
+  .header3 {
+    background-image: url("/images/desktop-image-hero-3.jpg");
   }
   .brand-title {
     -webkit-box-ordinal-group: 2;
@@ -346,12 +381,18 @@ nav {
     padding: 0 15px;
   }
   .hero-title {
-    width: calc(1440px - 840px);
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 1;
+    grid-column: 2/3;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
+    grid-row: 1/2;
     height: 100%;
     padding-top: 120px;
     padding-bottom: 153px;
     padding-left: 100px;
     padding-right: 100px;
+    position: relative;
   }
   .main-text {
     font-size: 40px;
@@ -359,25 +400,51 @@ nav {
     letter-spacing: -1.67px;
   }
   .arrow-icons {
-    top: 53.8vh;
+    display: none;
+  }
+  .arrow-icons-desktop {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    position: absolute;
+    bottom: 35px;
     left: 0;
   }
-  .arrow-icons .arrow-right,
-  .arrow-icons .arrow-left {
+  .arrow-icons-desktop .arrow-right-desk,
+  .arrow-icons-desktop .arrow-left-desk {
     width: 80px;
     height: 80px;
+    background-color: black;
   }
-  .arrow-right,
-  .arrow-left {
+  .arrow-icons-desktop:hover {
+    background-color: #444444;
+    cursor: pointer;
+  }
+  .arrow-right-desk,
+  .arrow-left-desk {
     width: 12px;
     height: 24px;
+    background-repeat: no-repeat;
+    background-position: center;
   }
-  .container-items-bottom {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    height: 33.25vh;
+  .arrow-right-desk {
+    background-image: url("/images/icon-angle-right.svg");
+  }
+  .arrow-left-desk {
+    background-image: url("/images/icon-angle-left.svg");
+  }
+  .sample-img-1, .sample-img-2 {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  .about-us-container {
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    -ms-grid-column-align: center;
+        justify-self: center;
   }
 }
 
