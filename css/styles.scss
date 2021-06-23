@@ -442,12 +442,14 @@ nav {
             width: 80px;
             height: 80px;
             background-color: black;
+
+            &:hover {
+                background-color: #444444;
+                cursor: pointer;
+            }
         }
 
-        &:hover {
-            background-color: #444444;
-            cursor: pointer;
-        }
+        
     }
 
     .arrow-right-desk,

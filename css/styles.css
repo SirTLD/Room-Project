@@ -477,7 +477,8 @@ nav {
     height: 80px;
     background-color: black;
   }
-  .arrow-icons-desktop:hover {
+  .arrow-icons-desktop .arrow-right-desk:hover,
+  .arrow-icons-desktop .arrow-left-desk:hover {
     background-color: #444444;
     cursor: pointer;
   }
