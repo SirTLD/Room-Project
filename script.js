@@ -6,6 +6,12 @@ const navLinkItems = document.querySelectorAll('.nav-links li');
 
 burgerIcon.addEventListener('click', () => {
   navbarLinks.classList.toggle('nav-active');
+  if (navbarLinks.classList.contains('nav-active')) {
+    burgerIcon.style.position = 'fixed';
+  } else {
+    burgerIcon.style.position = 'static';
+  }
+
   burgerIcon.classList.toggle('toggle-close');
 });
 
