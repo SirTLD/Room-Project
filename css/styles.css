@@ -359,7 +359,6 @@ nav {
 
 @media screen and (min-width: 1280px) {
   .container {
-    overflow-y: hidden;
     width: 100vw;
     height: 100vh;
     display: -ms-grid;
