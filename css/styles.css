@@ -429,7 +429,7 @@ nav {
   }
   .nav-links {
     background-color: rgba(255, 255, 255, 0);
-    left: -10%;
+    left: -12%;
     -webkit-box-ordinal-group: 3;
         -ms-flex-order: 2;
             order: 2;
@@ -454,8 +454,8 @@ nav {
     height: 100%;
     padding-top: 120px;
     padding-bottom: 153px;
-    padding-left: 100px;
-    padding-right: 100px;
+    padding-left: 85px;
+    padding-right: 85px;
     width: 40%;
     position: relative;
   }
@@ -524,15 +524,6 @@ nav {
 @media screen and (min-width: 2500px) {
   .header {
     width: 58.85%;
-  }
-  .nav-links {
-    left: -17%;
-  }
-}
-
-@media screen and (min-width: 2500px) {
-  .header {
-    width: 58.83%;
   }
   .nav-links {
     left: -17%;
