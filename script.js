@@ -40,11 +40,14 @@ function displaySlides(n) {
   for (i = 0; i < slides.length; i++) {
     slides[i].style.display = 'none';
   }
-  if ((window.innerWidth = '700px' || window.innerWidth < '700px')) {
+
+  if (`window.innerWidth < '700px'`) {
     header.style.backgroundImage = `url('/images/mobile-image-hero-${slide_index}.jpg')`;
     header.style.backgroundSize = 'cover';
+    header.style.backgroundPosition = 'center';
+    header.style.backgroundRepeat = 'no-repeat';
   }
-  if (window.innerWidth > '700px') {
+  if (`window.innerWidth > '700px'`) {
     header.style.backgroundImage = `url('/images/desktop-image-hero-${slide_index}.jpg')`;
   }
   slides[slide_index - 1].style.display = 'block';
