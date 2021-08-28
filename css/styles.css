@@ -84,7 +84,7 @@ nav {
   height: 110px;
   width: 100vw;
   position: absolute;
-  left: 1000px;
+  left: 1300px;
   transition: all ease-in-out .5s;
   -webkit-transition: all ease-in-out .5s;
   -moz-transition: all ease-in-out .5s;
@@ -330,6 +330,12 @@ nav {
   background-repeat: no-repeat;
 }
 
+@media screen and (min-width: 540px) {
+  .arrow-icons {
+    right: -40px;
+  }
+}
+
 @media screen and (min-width: 768px) {
   .nav-links ul {
     padding-left: 30%;
@@ -350,6 +356,12 @@ nav {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .arrow-icons {
+    right: -80px;
   }
 }
 

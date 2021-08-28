@@ -69,7 +69,7 @@ nav {
     height: 110px;
     width: 100vw;
     position: absolute;
-    left: 1000px;
+    left: 1300px;
     transition: all ease-in-out .5s;
     -webkit-transition: all ease-in-out .5s;
     -moz-transition: all ease-in-out .5s;
@@ -288,6 +288,12 @@ nav {
 
 //MEDIA QUERIES
 
+@media screen and (min-width: 540px) {
+    .arrow-icons {
+        right: -40px;
+    }
+}
+
 @media screen and (min-width: 768px) {
 
     .nav-links {
@@ -317,6 +323,14 @@ nav {
         background-position: center;
     }
 }
+
+
+@media screen and (min-width: 1024px) {
+  .arrow-icons {
+        right: -80px;
+    }
+}
+
 
 
 @media screen and (min-width: 1280px) {
